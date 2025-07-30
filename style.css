@@ -45,6 +45,23 @@ input, select {
   border: 1px solid #ccc;
   background-color: #f9f9f9;
 }
+.phone-wrapper {
+  display: flex;
+  align-items: center;
+}
+.prefix {
+  padding: 12px;
+  background: #eee;
+  border-radius: 12px 0 0 12px;
+  border: 1px solid #ccc;
+  border-right: none;
+  font-size: 16px;
+}
+.phone-wrapper input {
+  border-radius: 0 12px 12px 0;
+  border-left: none;
+  flex: 1;
+}
 input:focus, select:focus {
   border-color: #C8A951;
   outline: none;
@@ -69,13 +86,14 @@ button:hover {
   text-align: center;
   margin-top: 20px;
 }
-#telegram-link a {
+#telegram-link button {
   background: #C8A951;
   color: white;
   padding: 12px 18px;
-  text-decoration: none;
   border-radius: 12px;
-  display: inline-block;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
 }
 .discount {
   font-size: 14px;
