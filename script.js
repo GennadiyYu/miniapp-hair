@@ -22,7 +22,7 @@ document.getElementById("booking-form").addEventListener("submit", function (e) 
 `;
 
   const TOKEN = "8015004536:AAGP8_o4RaI4VKNTjnITR23PCYn0TWEgpRw";
-  const CHAT_ID = "292012626";
+  const CHAT_ID = "1361426775";
   const URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
   fetch(URL, {
