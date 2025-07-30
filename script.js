@@ -3,11 +3,17 @@ document.getElementById("booking-form").addEventListener("submit", function (e) 
   e.preventDefault();
 
   const data = new FormData(e.target);
+  const phone = data.get("phone").trim();
+
+  if (!phone.startsWith("+7")) {
+    alert("Пожалуйста, введите номер телефона, начиная с +7");
+    return;
+  }
 
   const message = `
 <b>Новая заявка в HairReconstruction</b>%0A
 <b>Имя:</b> ${data.get("name")}%0A
-<b>Телефон:</b> ${data.get("phone")}%0A
+<b>Телефон:</b> ${phone}%0A
 <b>Instagram:</b> ${data.get("instagram")}%0A
 <b>Услуга:</b> ${data.get("service")}%0A
 <b>Дата и время:</b> ${data.get("datetime")}
