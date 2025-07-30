@@ -26,7 +26,7 @@ document.getElementById("booking-form").addEventListener("submit", function (e) 
   })
     .then(response => {
       if (response.ok) {
-        alert("✅ Заявка отправлена!");
+        alert("✅ Спасибо за заявку!\nАдминистратор свяжется с вами в ближайшее время!");
         e.target.reset();
       } else {
         alert("❌ Ошибка отправки");

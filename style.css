@@ -2,24 +2,61 @@
 body {
   font-family: Arial, sans-serif;
   padding: 20px;
+  max-width: 480px;
+  margin: auto;
   background: #ffffff;
   color: #000;
+  animation: fadeIn 1.2s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.logo img {
+  max-width: 160px;
+  animation: scaleIn 1s ease-in-out;
+}
+@keyframes scaleIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
 h1 {
   color: #C8A951;
   text-align: center;
 }
+form {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  margin-bottom: 12px;
+  font-size: 14px;
+}
 input, select {
-  margin-bottom: 10px;
   padding: 10px;
+  margin-top: 4px;
+  font-size: 16px;
   width: 100%;
   box-sizing: border-box;
 }
 button {
   background: black;
   color: white;
-  padding: 12px;
-  border: none;
-  width: 100%;
+  padding: 14px;
   font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+button:hover {
+  background: #222;
+}
+.discount {
+  font-size: 14px;
+  color: green;
+  margin-bottom: 14px;
 }
