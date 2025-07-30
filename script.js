@@ -34,6 +34,7 @@ document.getElementById("booking-form").addEventListener("submit", function (e) 
       if (response.ok) {
         alert("✅ Спасибо за заявку!\nАдминистратор свяжется с вами в ближайшее время!");
         e.target.reset();
+        document.getElementById("telegram-link").style.display = "block";
       } else {
         alert("❌ Ошибка отправки");
       }
